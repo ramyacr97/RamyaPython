@@ -2,16 +2,16 @@ Value Filldown BGP_RID ([0-9\.]+)
 Value Filldown LOCAL_AS (\d+)
 Value NEIGHBOR ([0-9\.]+)
 #Value AS (\d+)
-Value NUM (\d+)
-Value UP_DOWN (4w5d|4w4d|4w3d|never)
-Value PREFIX (\S\S+)
+Value NUM (\d{4,6})
+Value UP_DOWN (\S+)
+Value PREFIX (\S+)
 
 Start
   ^BGP router identifier ${BGP_RID}, local AS number ${LOCAL_AS}\s*$$
   ^Neighbor.*PfxRcd$$ -> BGPInfo
 
 BGPInfo
-  ^${NEIGHBOR}\s+4\s+${NUM}\s.*${UP_DOWN}\s+${PREFIX}\s*$$ -> Record
+  ^${NEIGHBOR}\s+4\s+${NUM}\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+\s+${UP_DOWN}\s+${PREFIX} -> Record
 
 EOF
 
