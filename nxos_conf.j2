@@ -1,0 +1,10 @@
+{%- if nxos1 is defined %}
+nxos1
+interface {{ interface_name }}        
+    ip address {{ ip_addr1 }} {{ netmask }}
+{%- if nxos2 is defined %}
+nxos2
+interface {{ interface_name }}
+    ip address {{ ip_addr2 }} {{ netmask }}
+{%- endif %}
+{%- endif %}

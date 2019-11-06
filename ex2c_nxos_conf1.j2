@@ -1,0 +1,12 @@
+{%- if nxos1_connect %}
+interface {{ interface_name }}        
+  ip address {{ ip_addr1 }} {{ netmask }}
+{% include bgp_con %}
+{%- endif %}
+{%- if nxos2_connect %}
+interface {{ interface_name }}
+  ip address {{ ip_addr2 }} {{ netmask }}
+{% include bgp_con %}
+{%- endif %}
+
+

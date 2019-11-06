@@ -1,0 +1,11 @@
+{%- if nxos1_connect %}
+router bgp {{ local_as }}
+  neighbor {{ ip_addr2 }} remote-as {{ local_as }}
+    address-family ipv4 unicast
+{%- endif %} 
+{%- if nxos2_connect %}
+router bgp {{ local_as }}
+  neighbor {{ ip_addr1 }} remote-as {{ local_as }}
+    address-family ipv4 unicast
+{%- endif %}
+    

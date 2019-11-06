@@ -1,0 +1,18 @@
+{%- if nxos1 == 1 %}
+interface {{ interface_name }}        
+    ip address {{ ip_addr1 }} {{ netmask }}
+
+router bgp {{ local_as }}
+  neighbor {{ ip_addr2 }} remote-as {{ local_as }}
+    address-family ipv4 unicast
+{%- endif %}
+
+{% if nxos2 == 1 %}
+interface {{ interface_name }}
+    ip address {{ ip_addr2 }} {{ netmask }}
+
+router bgp {{ local_as }}
+  neighbor {{ ip_addr1 }} remote-as {{ local_as }}
+    address-family ipv4 unicast
+{% endif %}
+
