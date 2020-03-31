@@ -1,0 +1,10 @@
+<configuration>
+        <routing-options>
+            <static>
+                <route>
+                    <name>203.0.113.5/32 discard</name>
+                    <name>203.0.113.200/32 discard</name>
+                </route>
+            </static>
+        </routing-options>
+</configuration>
