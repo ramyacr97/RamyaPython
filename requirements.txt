@@ -65,7 +65,7 @@ pyasn1==0.4.7
 pycodestyle==2.5.0
 pycparser==2.19
 pycryptodomex==3.9.0
-pydantic==0.18.2
+pydantic==1.6.2
 pydocstyle==4.0.1
 pyeapi==0.8.2
 pyflakes==2.1.1
