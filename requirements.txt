@@ -50,7 +50,7 @@ netmiko==2.4.2
 nornir==2.2.0
 nxapi-plumbing==0.5.2
 packaging==19.1
-paramiko==2.6.0
+paramiko==2.10.1
 parso==0.5.1
 passlib==1.7.1
 pep8==1.7.1
